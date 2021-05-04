@@ -1,0 +1,325 @@
+*, *:after, *:before {
+		margin: 0;
+		padding: 0;
+}
+
+body
+{
+	background: #dfdada;	
+		height: 100%;
+		width: 100%;
+		-webkit-text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+		position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+
+.menubar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 5px solid rgba(244, 66, 66, 0.3);
+}
+
+.menubar li{
+	float: left;
+	width: 33.33%;
+}
+
+.menubar li:nth-child(0){
+	text-align: left;
+}
+.menubar li:nth-child(2){
+	text-align: center;
+}
+.menubar li:nth-child(3){
+	text-align: right;
+}
+
+.menubar li a {   
+		display: block;
+		text-decoration: none;
+	font-size: 1.5em;
+	color: #555;
+}
+ 
+.menubar li a.active {
+		color: #111;
+}
+
+.menubar li a i{
+	padding: 10px;
+}
+/*ALTERA AS FORMAS menushape1 e menushape2 DA TELA INICIAL */
+.menushape1{
+	width: 450px;
+	height: 400px; 
+	background: linear-gradient(90deg, rgba(248, 232, 13, 0.8) 0%, rgba(224, 246, 98, 0.5) 35%, rgba(229, 255, 0, 0.6) 100%);
+	border-radius: 50%;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	z-index: -1;
+}
+
+.menushape2{
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(90deg, rgba(247, 142, 43, 0.5) 0%, rgba(255, 185, 145, 0.6) 35%, rgba(245, 140, 54, 0.9) 100%);
+	border-radius: 50%;
+	position: absolute;
+	top: -20px;
+	left: -100px;
+	z-index: -1;
+}
+/*ALTERA A  FORMA DO MENU INICIAL */
+.sidenav{
+	height: 100%;
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #555;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	z-index: 1000;
+}
+
+
+.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 1.2em;
+		color: #fff;
+		display: block;
+		transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+		color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		font-size: 1.5em;
+		color: rgba(24, 80, 41, 0.8);
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+.sidenavshape{
+	width: 400px;
+	height: 500px;
+	background: rgb(244, 241, 66);
+	border-radius: 10%;
+	transform: rotate(40deg);
+	position: absolute;
+	top: -80px;
+	left: -230px;
+	z-index: -1;
+}
+
+.sidenav ul{
+	list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		margin: 50px 0;
+		height: 360px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		transition: 0.1s;
+ 
+}
+
+.sidenav li:last-child{
+		margin-top: auto;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+ }
+
+.sidenav li a:not(.closebtn) {
+		display: block;
+		color: #fff;
+		padding: 8px 16px;
+		font-weight: 400;
+		text-decoration: none;
+		font-family: 'Open Sans', sans-serif;
+		width: 160px;
+}
+ .sidenav li:last-child{
+		vertical-align: bottom;
+		font-size: 0.8em;
+		width: 120px;
+		border:1px solid rgba(116, 115, 28, 0.4);
+ }
+.sidenav li.active a {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	color: #555;
+	font-weight: 600;
+}
+.sidenav li a:hover {
+		width: 200px;
+		background-color: #555;
+		color: white;
+}
+ 
+.profile{
+	padding: 0 25px
+}
+.profile img{
+	width: 100px;
+	background-color: rgba(66, 244, 104, 0.4);
+	border:5px solid rgba(244, 215, 66,0.8);
+	float: right;
+	margin: 0 25px;
+}
+
+.profile h3{
+	position: absolute;
+	font-size: 1.4em;
+	width: 100px;
+	margin: 25px 0;
+	color: #555;
+	top: 75px;
+	left: 20px;
+}
+
+.profile p{
+	position: absolute;
+	top: 130px;
+	left: 20px;
+	color: #000;
+	border-top: 1px solid #fff;
+	letter-spacing: 1px;
+}
+
+.clearfix
+{
+	clear: both;
+}
+
+.title-block {
+	margin-top: 0.5rem;
+}
+
+/* ESTILO DO CARROSSEL */
+.owl-carousel {
+	border-radius: 20px;
+	margin-top: 25px;
+  }
+  
+  .owl-carousel .item{
+	border-radius: 20px;
+	margin-top: 25px;
+	background: rgba(255, 255, 255,0.3);
+	padding-bottom: 5px;
+	height: 180px;
+  }
+  .owl-carousel .item img{
+	height: 130px;
+	border-radius: 20px;
+	border: 10px solid  rgba(255, 255, 255, 0.3);
+  }
+  
+  
+  .owl-carousel .item h4{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	font-size: 1em;
+	color: #111;
+	font: 600 1em Arial;
+	text-align: center;
+  }
+
+/*ESTILO NOTICIAS */
+.news{
+	margin-top:8px; 
+	padding: 5px;
+  }
+  
+  .news h2{
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.5em;
+	font-weight: 800;
+	border-bottom: 1px solid rgba(244, 215, 66,0.8);
+	margin: 20px 0;
+  }
+  
+  .news h2 span{
+	  border-bottom: 3px solid #555;
+	  display: inline-block;
+	  margin: 0 0 -2px 0;
+	  padding: 5px 3px;
+  }
+  
+  .news .news-item {
+	margin-top: 10px;
+	padding: 15px;
+  }
+  
+  .news .news-item img{ 
+	height: 100px;
+	width: 25%;
+	border:5px solid rgba(78, 23, 19, 0.4);
+	border-radius: 10px;
+	float: left;
+	box-shadow: -10px -10px 1px rgba(244, 241, 66, 0.7);
+	position: relative;
+	top: -10px;
+  }
+  .news .news-desc {
+	margin-top: 10px;
+	height: 80px;
+	border-top:1px dashed rgb(116, 49, 32);
+	border-bottom:1px dotted rgb(152, 160, 38);
+	padding: 5px 0 0 15px;
+	float: left;
+	width: 58%;
+  }
+  
+  .news .news-item h4{
+	font-size: 1.1em;
+	font-weight: 600;
+	color: #333;
+  }
+  .news .news-item p{
+	font-size: 0.7em;
+	color: #333;
+  }
+  .news .news-item .social{ 
+	height: 70px;
+	width: 15%;
+	border:5px solid rgba(244, 107, 66, 0.4);
+	border-radius: 10px;
+	float: right;
+	box-shadow: 10px 10px 1px rgba(10, 44, 31, 0.7);
+	position: relative;
+	bottom: -10px;
+	text-align: center;
+  }
+  
+  .news .news-item .social a{
+	line-height: 30px;
+  }
+  

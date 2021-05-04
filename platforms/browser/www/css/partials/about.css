@@ -1,0 +1,37 @@
+.container-about {
+    max-width: 425px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+
+.container-about .title-block {
+    margin-top: 1rem;
+}
+
+.container-about .title-block .title {
+    font-size: 30px;
+}
+
+.container-about .text-about {
+    margin-top: 1.5rem;
+}
+
+.container-about .text-about p {
+    font-size: 18px;
+}
+
+.container-about .text-about p span  {
+    display: block;
+    font-style: italic;
+}
+
+.container-about .img-block {
+    margin-top: 0.5rem;
+}
+
+.container-about .img-block img {
+    width: 100px;
+    height: 130px;
+}

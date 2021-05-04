@@ -1,0 +1,41 @@
+.container-contact {
+    max-width: 425px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-contact .title-block {
+    margin-top: 2rem;
+}
+
+.container-contact #form-contact {
+    width: 100%;
+    font-size: 20px;
+}
+
+.container-contact #form-contact label {
+    display: block;
+}
+
+.container-contact #form-contact .input-block,
+.container-contact #form-contact .textarea-block,
+.container-contact #form-contact .button-block {
+    display: block;
+    margin-top: 1.6rem;
+}
+
+.container-contact #form-contact .textarea-block textarea {
+    width: 250px;
+    min-height: 50px;
+}
+
+.container-contact #form-contact .button-submit {
+    width: 200px;
+    padding: 2px;
+    border: 0;
+    border-radius: 10px;
+    background: #4aa34a;
+    cursor: pointer;
+    border: 1px solid #7ec43d;
+}

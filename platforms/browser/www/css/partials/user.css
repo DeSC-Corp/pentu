@@ -1,0 +1,28 @@
+.container-user {
+    max-width: 425px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+
+.container-user .title-block {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+
+.container-user .title-block .title {
+    font-size: 30px;
+}
+
+.container-user .title-block img {
+    width: 80px;
+    height: 80px;
+}
+
+.container-user .text-about {
+    margin-top: 2rem;
+    font-size: 18px;
+}

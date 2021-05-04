@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <title>Design Carrossel</title>
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/partials/about.css">
+</head>
+
+<body>
+    <!-- Botões MenuShape Menu Superior  -->
+    <div class="container">
+        <div class="app">
+            <div class="menushape1"></div>
+            <div class="menushape2"></div>
+            <ul class="menubar">
+                <li>
+                    <a class="active" href="javascript:void(0)" onclick="openNav()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil.html">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Menu Lateral -->
+        <div class="sidenav" id="sidenav">
+            <div class="sidenavshape"></div>
+            <div class="profile">
+                <img src="img/avatar.jpeg" alt="avatar">
+                <h3>Menu</h3>
+            </div>
+            <!-- Itens do Menu Lateral -->
+            <div class="clearfix"></div>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="celular.html">Celulares</a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="javascript:window.close()">
+                        <i class="fas fa-sign-out-alt"></i>Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-about">
+            <div class="title-block">
+                <h2 class="title">Sobre o Aplicativo</h2>
+            </div>
+            <div class="text-about">
+                <p>Aplicativo desenvolvido durante as aulas de <strong>PAM - Programação para Aplicativos Mobile</strong>.</p>
+                <p>Realizado para entrega de atividade.<span>Vale um MB em sor :)</span></p>
+            </div>
+            <div class="img-block">
+                <img src="img/mike.png" alt="Mike Wasalski">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("sidenav").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0px";
+        }
+    </script>
+</body>
+
+</html>

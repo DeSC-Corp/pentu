@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <title>Design Carrossel</title>
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+</head>
+
+<body>
+    <!-- Botões MenuShape Menu Superior  -->
+    <div class="container">
+        <div class="app">
+            <div class="menushape1"></div>
+            <div class="menushape2"></div>
+            <ul class="menubar">
+                <li>
+                    <a class="active" href="javascript:void(0)" onclick="openNav()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil.html">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Menu Lateral -->
+        <div class="sidenav" id="sidenav">
+            <div class="sidenavshape"></div>
+            <div class="profile">
+                <img src="img/avatar.jpeg" alt="avatar">
+                <h3>Menu</h3>
+            </div>
+            <!-- Itens do Menu Lateral -->
+            <div class="clearfix"></div>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="celular.html">Celulares</a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="javascript:window.close()">
+                        <i class="fas fa-sign-out-alt"></i>Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <!-- Divisão de Notícias --> 
+            <div class="news">
+                <h2><span>Empresas</span></h2>		          	
+                <div class="row news-item">
+                    <img src="img/empresas/empresa1.png" alt="">
+                    <div class="news-desc">
+                        <h4>Asus</h4>
+                        <p>A Asus é a 5ª maior fornecedora de PCs do mundo em 2017</p>
+                    </div>
+                    <div class="social">
+                        <a href="" class="text-success" onclick="likedAsus()"><i class="fas fa-thumbs-up"></i></a>
+                        <br><br>
+                        <a href="celular.html#asus" class="text-info"><i class="fas fa-share"></i></a>
+                    </div>
+                </div>
+                <div class="row news-item">
+                    <img src="img/empresas/empresa2.png" alt="">
+                    <div class="news-desc">
+                        <h4>Xiaomi</h4>
+                        <p>A empresa vendeu mais de 60 milhões de telefones celulares em 2014.</p>
+                    </div>
+                    <div class="social">
+                        <a href="" class="text-success" onclick="likedXiaomi()"><i class="fas fa-thumbs-up"></i></a>
+                        <br><br>
+                        <a href="celular.html#xiaomi" class="text-info"><i class="fas fa-share"></i></a>
+                    </div>
+                </div>
+                <div class="row news-item">
+                    <img src="img/empresas/empresa3.jpg" alt="">
+                    <div class="news-desc">
+                        <h4>Samsung</h4>
+                        <p>A receita da Samsung foi equivalente a 17% do PIB de US$ 1.082 bilhões da Coreia do Sul.</p>
+                    </div>
+                    <div class="social">  
+                        <a href="" class="text-success" onclick="likedSamsung()"><i class="fas fa-thumbs-up"></i></a>
+                        <br><br>
+                        <a href="celular.html#samsung" class="text-info"><i class="fas fa-share"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("sidenav").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0px";
+        }
+
+        function likedAsus() {
+            alert("Tem uns celulares bons...");
+        }
+        function likedXiaomi() {
+            alert("Melhor que iPhone XD");
+        }
+        function likedSamsung() {
+            alert("Porque eu gastaria meu dinheiro com isso?");
+        }
+    </script>
+</body>
+
+</html>
