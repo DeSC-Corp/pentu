@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <title>Pentu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div id="page">
+        <header class="home">
+            <h1>Pentu</h1>
+        </header>
+        <main>
+            <form class="translate-30" name="form">
+                <h3 class="text-center margin-15">Seja bem vindx! Cadastre-se<br> para continuar</h3>
+                <input type="text" name="name" id="name" placeholder="Nome completo" class="margin-10">
+                <input type="text" name="email" id="email" placeholder="E-mail" class="margin-10">
+                <input type="password" name="pass" id="pass" placeholder="Senha" class="margin-10">
+                <input type="password" name="passC" id="passC" placeholder="Confirmar senha" class="margin-10">
+                <input type="text" name="tel" id="tel" placeholder="Telefone" class="margin-10">
+                <input type="date" name="nasc" id="nasc" class="margin-10">
+                <div class="checkbox">
+                    <input type="checkbox" id="check" name="check">Li e aceito os termos de uso.
+                </div>
+                <button type="submit" id="register" class="btn-filled margin-15 width-100 text-center">Cadastrar-se</button>
+                <p class="text-center margin-10">ou</p>
+                <section class="width-100">
+                    <button type="submit" class="btn-outline margin-15 width-100 text-center">Registrar-se com Google</button>
+                    <button type="submit" class="btn-outline width-100 text-center">Registrar-se com Facebook</button>
+                </section>
+            </form>
+            <h4 class="text-center width-100" style="margin-bottom: 24px">Já tem uma conta? <a href="index.html">Entrar</a></h4>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#register").click(function() {
+                var url = "https://localhost/pentu/login/cadastrar.php";
+                
+                var nome = $.trim($("#name").val());
+                var email = $.trim($("#email").val());
+                var telefone = $.trim($("#tel").val());
+                var nascimento = $.trim($("#nasc").val());
+
+                var senha = $.trim($("#pass").val());
+                var senhaC = $.trim($("#passC").val());
+                $("#status").text("Confirmando Senha...");
+                
+                if(document.form.check.checked) {
+                    if(senha == senhaC) {
+                        $("#status").text("Criando Usuário...");
+                        var dataString = "nome=" + nome + "&email=" + email + "&pass=" + senha + "&tel=" + telefone + "&nasc=" + nascimento + "&register=";
+                        
+                        $.ajax({
+                            type: "POST",
+                            crossDomain: true, 
+                            cache: false,
+                            url: url,
+                            data: dataString,
+                            success: function(data) {
+                                if($.trim(data) == "success")
+                                    $("#status").text("Cadastrado com sucesso");
+                                else if($.trim(data) == "exist")
+                                    $("#status").text("Está conta já existe");
+                                else if($.trim(data) == "error")
+                                    $("#status").text("Falha no Cadastro");
+                            }
+                        });
+                    } 
+                    else {
+                        alert('Falha na confirmação de senha.');
+                        $("#status").text("Verifique a caixa: confirmar senha");
+                    }
+                }
+                else {
+                    alert('Para criar uma conta, é necessário aceitar os termos de uso.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
